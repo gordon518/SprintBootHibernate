@@ -1,0 +1,12 @@
+package com.imooc.demo.dao;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+import com.imooc.demo.entity.GoodsDo;
+
+/**
+ * 商品数据操作接口
+ */
+@Repository
+public interface IGoodsDao extends CrudRepository<GoodsDo, Long> {
+}
