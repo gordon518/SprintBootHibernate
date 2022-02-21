@@ -13,44 +13,43 @@ import com.imooc.demo.entity.GoodsDo;
 import com.imooc.demo.service.GoodsService;
 
 /**
- * 商品控制器类
+ * Controller for Goods class
  */
 @RestController
 public class GoodsController {
 	@Autowired
 	private GoodsService goodsService;
 	/**
-	 * 按id获取商品信息
+	 * Get Goods by id
 	 */
 	@GetMapping("/goods/{id}")
 	public Optional<GoodsDo> getOne(@PathVariable("id") long id) {
 		return goodsService.getById(id);
 	}
 	/**
-	 * 获取商品列表
+	 * Get list of Goods
 	 */
 	@GetMapping("/goods")
 	public Iterable<GoodsDo> getList() {
 		return goodsService.getList();
 	}
 	/**
-	 * 新增商品
+	 * Add new Goods
 	 */
 	@PostMapping("/goods")
 	public void add(@RequestBody GoodsDo goods) {
 		goodsService.add(goods);
 	}
 	/**
-	 * 编辑商品
+	 * Edit Goods
 	 */
 	@PutMapping("/goods/{id}")
 	public void update(@PathVariable("id") long id, @RequestBody GoodsDo goods) {
-		// 修改指定id的博客信息
 		goods.setId(id);
 		goodsService.edit(goods);
 	}
 	/**
-	 * 移除商品
+	 * Delete Goods
 	 */
 	@DeleteMapping("/goods/{id}")
 	public void delete(@PathVariable("id") long id) {
