@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 import com.imooc.demo.entity.GoodsDo;
 
 /**
- * 商品数据操作接口
+ * interface for operation of Goods table
  */
 @Repository
 public interface IGoodsDao extends CrudRepository<GoodsDo, Long> {

@@ -12,7 +12,7 @@ import javax.transaction.Transactional;
 @Repository
 public interface MemberDao extends JpaRepository<Member, Long>{
 
-    //默认提供了Optional<Member> findById(Long id);
+    //provided "Optional<Member> findById(Long id);" by default 
 
     Member findByName(String name);
 

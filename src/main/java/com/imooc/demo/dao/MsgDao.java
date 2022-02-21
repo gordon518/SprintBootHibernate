@@ -13,7 +13,7 @@ import javax.transaction.Transactional;
 @Repository
 public interface MsgDao extends JpaRepository<Msg, MsgPK>{
 
-    //默认提供了Optional<Msg> findById(MsgPK id);
+    //Provided "Optional<Msg> findById(MsgPK id);" by default
 
     @Query("select m from Msg m where m.receId = ?1")
     Page<Msg> findByReceId(Long receId, Pageable pageable);

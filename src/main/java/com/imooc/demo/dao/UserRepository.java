@@ -12,7 +12,7 @@ import javax.transaction.Transactional;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long>{
 
-    //默认提供了Optional<User> findById(Long id);
+    //Provided "Optional<User> findById(Long id)" by default
 
     User findByName(String name);
 
