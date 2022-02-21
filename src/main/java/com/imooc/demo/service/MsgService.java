@@ -1,8 +1,6 @@
 package com.imooc.demo.service;
 
-import com.imooc.demo.entity.Member;
 import com.imooc.demo.entity.Msg;
-import com.imooc.demo.entity.User;
 import com.imooc.demo.dao.MsgDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

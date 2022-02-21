@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 
 /**
- * 商品服务类
+ * Service for Goods
  */
 @Service
 public class GoodsService {
@@ -15,35 +15,35 @@ public class GoodsService {
 	private IGoodsDao goodsDao;
 
 	/**
-	 * 新增商品
+	 * Add Goods
 	 */
 	public void add(GoodsDo goods) {
 		goodsDao.save(goods);
 	}
 
 	/**
-	 * 删除商品
+	 * Delete Goods
 	 */
 	public void remove(Long id) {
 		goodsDao.deleteById(id);
 	}
 
 	/**
-	 * 编辑商品信息
+	 * Edit Goods
 	 */
 	public void edit(GoodsDo goods) {
 		goodsDao.save(goods);
 	}
 
 	/**
-	 * 按id获取商品信息
+	 * Get Goods by id
 	 */
 	public Optional<GoodsDo> getById(Long id) {
 		return goodsDao.findById(id);
 	}
 
 	/**
-	 * 获取商品信息列表
+	 * Get Goods list
 	 */
 	public Iterable<GoodsDo> getList() {
 		return goodsDao.findAll();
