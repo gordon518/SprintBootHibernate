@@ -14,9 +14,9 @@ import javax.persistence.Table;
 import com.imooc.demo.entity.Member;
 import com.imooc.demo.entity.MsgPK;
 
-@Entity // 表示这是一个数据对象类
-@Table(name = "msg") // 对应数据库中的goods表
-@IdClass(MsgPK.class)
+@Entity // Entity Bean
+@Table(name = "msg") // table name
+@IdClass(MsgPK.class) //class for combined primary key
 public class Msg implements Serializable{
 	@Id
     @Column(name = "sendid")
@@ -35,7 +35,11 @@ public class Msg implements Serializable{
     
     @Column(name = "state")
     private Integer state;
-
+    
+    //(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    //@ManyToOne
+    //@JoinColumn(name = "sender_id")
+    
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "sendid", insertable = false, updatable = false)
     private Member sender;

@@ -9,8 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity // 表示这是一个数据对象类
-@Table(name = "member") // 对应数据库中的goods表
+@Entity //Entity Bean
+@Table(name = "member") // table name
 public class Member implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

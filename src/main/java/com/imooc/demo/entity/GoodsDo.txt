@@ -9,32 +9,32 @@ import javax.persistence.Table;
 import java.io.Serializable;
 
 /**
- * 商品类
+ * class of Goods
  */
-@Entity // 表示这是一个数据对象类
-@Table(name = "goods") // 对应数据库中的goods表
+@Entity // Entity Bean
+@Table(name = "goods") // table name goods
 public class GoodsDo {
 	/**
-	 * 商品id
+	 * goods id
 	 */
-	@Id // 该字段对应数据库中的列为主键
-	@GeneratedValue(strategy = GenerationType.IDENTITY) // 主键自增长
-	@Column(name = "id") // 对应goods表中的id列
+	@Id // primary key
+	@GeneratedValue(strategy = GenerationType.IDENTITY) // auto-increased key
+	@Column(name = "id") // field id
 	private Long id;
 	/**
-	 * 商品名称
+	 * Goods Name
 	 */
-	@Column(name = "name") // 对应goods表中的name列
+	@Column(name = "name") // field name
 	private String name;
 	/**
-	 * 商品价格
+	 * Goods Name
 	 */
-	@Column(name = "price") // 对应goods表中的price列
+	@Column(name = "price") // field price
 	private String price;
 	/**
-	 * 商品图片
+	 * Goods picture
 	 */
-	@Column(name = "pic") // 对应goods表中的pic列
+	@Column(name = "pic") // field pic
 	private String pic;
-	// 省略get set方法
+	// omit get set
 }
